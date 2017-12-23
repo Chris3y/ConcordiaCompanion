@@ -23,36 +23,34 @@ class Concordia extends React.Component {
 
   render(){
     return (
-      <div className="card">
-        <div className="">
+      <div className="">
+                { /* Page title */ }
+                <PageTitle pageTitle="Vesta" />
 
-          { /* Page title */ }
-          <PageTitle pageTitle="Vesta" />
+                { /* Top horizontal swirl */ }
+                <img className="horizontal-swirl" src="./content/swirl1.jpg" />
+                
+                { /* Rule description text and input */ }
+                <RuleDescription 
+                  text="If you caluclate value of all goods in your store and add them to your remaining cash value, what is the sum total?" 
+                  goalsValue={this.state.goalsValue} 
+                  changeGoalsValue={this.changeGoalsValue.bind(this)} />        
+                
+                { /* Number of cards input*/ }
+                <CardCount
+                cardsCount={this.state.cardsCount} 
+                changeCardsCount={this.changeCardsCount.bind(this)} />
 
-          { /* Top horizontal swirl */ }
-          <img className="horizontal-swirl" src="./content/swirl1.jpg" />
-          
-          { /* Rule description text and input */ }
-          <RuleDescription 
-            text="If you caluclate value of all goods in your store and add them to your remaining cash value, what is the sum total?" 
-            goalsValue={this.state.goalsValue} 
-            changeGoalsValue={this.changeGoalsValue.bind(this)} />        
-          
-          { /* Number of cards input*/ }
-          <CardCount
-          cardsCount={this.state.cardsCount} 
-          changeCardsCount={this.changeCardsCount.bind(this)} />
+                { /* Points awarded display */ }
+                <div>
+                  <div>Points Awarded</div>
+                  <p> {Math.floor(this.state.goalsValue / 10) * this.state.cardsCount} </p> 
+                </div>  
 
-          { /* Points awarded display */ }
-          <div>
-            <h3>Points Awarded</h3>
-            <p> {Math.floor(this.state.goalsValue / 10) * this.state.cardsCount} </p> 
-          </div>  
-
-          { /* Top horizontal swirl */ }
-          <img className="horizontal-swirl" src="./content/swirl1.jpg" />
-        </div>
-      </div>)
+                { /* Top horizontal swirl */ }
+                <img className="horizontal-swirl" src="./content/swirl1.jpg" />
+      </div>
+    )
   }
 }
 
@@ -68,6 +66,7 @@ class PageTitle extends React.Component {
       </div>)
   }
 };
+
 
 class RuleDescription extends React.Component {
   constructor(props) {
@@ -105,7 +104,6 @@ class CardCount extends React.Component {
   render(){
     return(
       <div>
-        <h3>How many cards?</h3>
         Cards: <input type="text" value={this.state.cardsCount} onChange={this.handleChange.bind(this)} />
       </div>   
     )

@@ -1,0 +1,26 @@
+{
+  "name": "concordiacompanion",
+  "version": "1.0.0",
+  "description": "Assistant for scoring the Concordia board game.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris3y/ConcordiaCompanion.git"
+  },
+  "keywords": [
+    "Concordia"
+  ],
+  "author": "Chris Lamb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris3y/ConcordiaCompanion/issues"
+  },
+  "homepage": "https://github.com/Chris3y/ConcordiaCompanion#readme",
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "requirejs": "^2.3.5"
+  }
+}
