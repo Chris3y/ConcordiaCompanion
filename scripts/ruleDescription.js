@@ -18,6 +18,7 @@ class RuleDescription extends React.Component {
                         type="number" 
                         min={this.props.min} 
                         max={this.props.max} 
+                        pattern="\d*"
                         value={this.state.goalsValue} 
                         onChange={this.handleChange.bind(this)} />
         </span>

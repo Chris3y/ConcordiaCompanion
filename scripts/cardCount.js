@@ -16,6 +16,7 @@ class CardCount extends React.Component {
                   type="number" 
                   min={this.props.min} 
                   max={this.props.max} 
+                  pattern="\d*"
                   value={this.state.cardsCount} 
                   onChange={this.handleChange.bind(this)} />
       </div>   
